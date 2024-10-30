@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DesignPatters.Facade.View.Adm.ActivityAdmCadastraLivro">
+
+    <EditText
+        android:id="@+id/cadastrar_livro_estoque"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:focusedByDefault="true"
+        android:imeOptions="actionUnspecified"
+        android:inputType="text"
+        android:nextFocusLeft="@+id/hora_homem_apontamento"
+        android:nextFocusRight="@+id/hora_homem_apontamento"
+        android:nextFocusUp="@+id/cadastrar_livro_sinopse"
+        android:nextFocusDown="@+id/hora_homem_apontamento"
+        android:nextFocusForward="@+id/hora_homem_apontamento"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cadastrar_livro_texto_estoque"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cadastrar_livro_texto_estoque"
+        app:layout_constraintTop_toTopOf="@+id/cadastrar_livro_texto_estoque"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/cadastrar_livro_texto_estoque"
+        android:layout_width="75dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="Estoque:"
+        android:textAlignment="center"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cadastrar_livro_genero" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/sv_main_cadastra_autores"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:defaultQueryHint="Nome do autor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16"
+        app:queryHint="Nome do autor" />
+
+    <EditText
+        android:id="@+id/cadastrar_livro_sinopse"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="start"
+        android:imeOptions="actionUnspecified"
+        android:inputType="text"
+        android:nextFocusLeft="@+id/obs_apontamento"
+        android:nextFocusRight="@+id/obs_apontamento"
+        android:nextFocusUp="@+id/obs_apontamento"
+        android:nextFocusDown="@+id/obs_apontamento"
+        android:nextFocusForward="@+id/obs_apontamento"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cadastrar_livro_texto_info2"
+        app:layout_constraintTop_toTopOf="@+id/cadastrar_livro_texto_info2"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/cadastrar_livro_data_lancamento"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="2dp"
+        android:textAlignment="center"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toTopOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:text="Lançamento:"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/botao_date_picker"
+        app:layout_constraintStart_toEndOf="@+id/botao_date_picker"
+        app:layout_constraintTop_toTopOf="@+id/botao_date_picker" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_adm_cadastrar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primaryColor"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <TextView
+        android:id="@+id/cadastrar_livro_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="100dp"
+        android:text="Cadastrar Novo Livro"
+        android:textAlignment="center"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_adm_cadastrar" />
+
+    <ImageButton
+        android:id="@+id/botao_date_picker"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cadastrar_livro_titulo"
+        app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="75dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Nome:"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botao_date_picker" />
+
+    <TextView
+        android:id="@+id/cadastrar_livro_texto_info2"
+        android:layout_width="75dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="Sinopse:"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cadastrar_livro_estoque" />
+
+    <TextView
+        android:id="@+id/textView42"
+        android:layout_width="75dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="Gênero:"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+    <EditText
+        android:id="@+id/cadastrar_livro_genero"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:focusedByDefault="true"
+        android:imeOptions="actionUnspecified"
+        android:inputType="text"
+        android:nextFocusLeft="@+id/hora_homem_apontamento"
+        android:nextFocusRight="@+id/hora_homem_apontamento"
+        android:nextFocusUp="@+id/cadastrar_livro_sinopse"
+        android:nextFocusDown="@+id/hora_homem_apontamento"
+        android:nextFocusForward="@+id/hora_homem_apontamento"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView42"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView42"
+        app:layout_constraintTop_toTopOf="@+id/textView42" />
+
+    <EditText
+        android:id="@+id/cadastrar_livro_nome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:imeOptions="actionUnspecified"
+        android:inputType="text"
+        android:nestedScrollingEnabled="false"
+        android:nextFocusLeft="@+id/hora_maquina_apontamento"
+        android:nextFocusRight="@+id/hora_maquina_apontamento"
+        android:nextFocusUp="@+id/hora_maquina_apontamento"
+        android:nextFocusDown="@+id/hora_maquina_apontamento"
+        android:nextFocusForward="@+id/hora_maquina_apontamento"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView20"
+        app:layout_constraintTop_toTopOf="@+id/textView20"
+        app:layout_constraintVertical_bias="0.444" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Autores"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cadastrar_livro_sinopse" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cadastrar_livro_lista_autores"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sv_main_cadastra_autores"
+        tools:listitem="@layout/item_lista_autor_livro" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/botao_cadastrar_salvar"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:adjustViewBounds="false"
+        android:backgroundTint="@color/primaryLightColor"
+        android:backgroundTintMode="src_in"
+        android:scaleType="fitXY"
+        android:src="@drawable/botao_finalizar_registro"
+        app:backgroundTint="@color/primaryLightColor"
+        app:backgroundTintMode="src_in"
+
+        app:fabCustomSize="45dp"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="45dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/botao_cadastrar_cancelar"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="32dp"
+        android:adjustViewBounds="false"
+        android:backgroundTintMode="src_in"
+        android:scaleType="fitXY"
+        android:src="@drawable/botao_cancelar_registros"
+        app:backgroundTint="@color/secondaryDarkColor"
+
+        app:fabCustomSize="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:maxImageSize="45dp" />
+
+    <Button
+        android:id="@+id/cadastrar_livro_botao_remover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/botao_arredondado_cancelar_vermelho"
+        android:clickable="true"
+        android:text="Remover"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

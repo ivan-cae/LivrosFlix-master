@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.livrosflix">
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo_inicializacao"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".DesignPatters.Facade.View.Entregador.ActivityEntregadorMain"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+
+        <activity
+            android:name=".DesignPatters.Facade.View.Entregador.ActivityCadastraEntrega"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+
+        <activity
+            android:name=".DesignPatters.Facade.View.Adm.ActivityListaAutores"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+
+        <activity
+            android:name=".DesignPatters.Facade.View.Adm.ActivityAdmCadastraAutores"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+
+        <activity
+            android:name=".DesignPatters.Facade.View.ActivityConfiguracoes"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+
+        <activity
+            android:name=".DesignPatters.Facade.View.Adm.ActivityAdmMain"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+
+        <activity
+            android:name=".DesignPatters.Facade.View.Adm.ActivityAdmCadastraLivro"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+
+        <activity
+            android:name=".DesignPatters.Facade.View.User.ActivityUserFazerPedido"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+
+        <activity
+            android:name=".DesignPatters.Facade.View.User.ActivityUserMain"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+
+        <activity
+            android:name=".DesignPatters.Facade.View.Adm.ActivityDashboard"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+
+        <activity
+            android:name=".DesignPatters.Facade.View.ActivityLogin"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+
+        <activity
+            android:name=".DesignPatters.Facade.View.ActivityInicializacao"
+            android:exported="true"
+            android:label="@string/apk_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
